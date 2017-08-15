@@ -1,0 +1,23 @@
+.results_div{
+	font-size: 15px;
+	padding-bottom: 25px;
+	margin-top: 25px;
+	display: inline-block;
+}
+
+.js_title{
+	font-size: 15px;
+}
+
+body {
+	font-family: 'Audiowide', cursive;
+	background-color: #069b12;
+}
+
+.logo {
+	color:#060caa;
+}
+
+.logo_1 {
+	color:#a01169;
+}
