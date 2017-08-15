@@ -4,7 +4,7 @@ function getDataFromApi(searchTerm,callBack) {
 	const query = {
 		part: 'snippet',
 		key: 'AIzaSyDCcEwchWH7T21rdinKTzI1FE4lv9pGgFw',
-/*		'eventType': 'live',*/
+		'eventType': 'live',
         'maxResults': '21',
          q:`${searchTerm} in:title`,
          type:'video'
