@@ -21,3 +21,10 @@ body {
 .logo_1 {
 	color:#a01169;
 }
+
+input:focus,
+button:focus,
+.img_class:focus { 
+    border: 5px dotted red;
+    overflow: hidden;
+}

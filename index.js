@@ -1,4 +1,6 @@
 const YOUTUBE_SEARCH_API = 'https://www.googleapis.com/youtube/v3/search';
+  const opElem = $('.js-search-results');
+  const resDiv = $('.results_div')
 
 function getDataFromApi(searchTerm,callBack) {
 	const query = {
@@ -18,7 +20,7 @@ function renderResult(result){
 	<div class="col-4 results_div">
 	<h2 class="js_title">${result.snippet.title}</h2>
 	<a href="https://youtu.be/${result.id.videoId}">
-	<img src="${result.snippet.thumbnails.medium.url}" alt="Result Image">
+	<img class="image_class" src="${result.snippet.thumbnails.medium.url}" alt=${result.snippet.title}>
 	</a>
 	</div>`
 	;
@@ -28,6 +30,11 @@ function displayYouTubeSearchData(data) {
 	console.log(data)
   const results = data.items.map((item, index) => renderResult(item));
   $('.js-search-results').html(results);
+  opElem
+    .empty()
+    .append(resDiv)
+    .prop('hidden', false);
+    console.log('ran')
 }
 
 function watchSubmit() {
